@@ -37,7 +37,9 @@ public abstract class CrudRepositoryImpl<T extends SuperEntity, ID extends Seria
 
     @Override
     public Optional<T> findById(ID pk) {
-        return Optional.of(entityManager.find(entityClassObj,pk));
+//        T t = entityManager.find(entityClassObj,pk);
+//        return t==null? Optional.empty():Optional.of(t);
+        return Optional.ofNullable(entityManager.find(entityClassObj,pk));
     }
 
     @Override
@@ -47,6 +49,6 @@ public abstract class CrudRepositoryImpl<T extends SuperEntity, ID extends Seria
 
     @Override
     public long count() {
-        return entityManager.createQuery("SELECT COUNT(e) FROM "+entityClassObj.getName()+" e",long.class).getSingleResult();
+        return entityManager.createQuery("SELECT COUNT(e) FROM "+entityClassObj.getName()+" e",Long.class).getSingleResult();
     }
 }

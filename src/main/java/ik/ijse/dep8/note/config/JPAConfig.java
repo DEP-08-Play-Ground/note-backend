@@ -32,7 +32,7 @@ public class JPAConfig {
         LocalContainerEntityManagerFactoryBean lcmfb = new LocalContainerEntityManagerFactoryBean();
         lcmfb.setDataSource(ds);
         lcmfb.setJpaVendorAdapter(jpaVendorAdapter);
-        lcmfb.setPackagesToScan("lk.ijse.dep8.note");
+        lcmfb.setPackagesToScan("ik.ijse.dep8.note.entity");
         return lcmfb;
     }
 
@@ -57,6 +57,7 @@ public class JPAConfig {
         return hikariDataSource;
     }
 
+    @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
