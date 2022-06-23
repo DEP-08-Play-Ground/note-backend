@@ -46,6 +46,7 @@ public class JPAConfig {
         return jpaVendorAdapter;
     }
 
+    @Bean
     public DataSource dataSource() {
         final HikariDataSource hikariDataSource = new HikariDataSource();
         hikariDataSource.setJdbcUrl(environment.getRequiredProperty("hikari.jdbc-url"));
