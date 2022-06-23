@@ -9,13 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f856a69-f340-42d6-87f8-4fe46273212d" name="Changes" comment="Add Yaml to the project">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImplTest.java" afterDir="false" />
+    <list default="true" id="7f856a69-f340-42d6-87f8-4fe46273212d" name="Changes" comment="Test Repos">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/advice/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/NoteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/exception/DuplicateEmailException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/exception/NotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/JPAConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/api/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebAppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebRootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebRootConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/CrudRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/CrudRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -83,6 +87,7 @@
       <recent name="ik.ijse.dep8.note.repository.custom.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ik.ijse.dep8.note.dto" />
       <recent name="ik.ijse.dep8.note.repository.custom.impl" />
     </key>
   </component>
@@ -91,7 +96,7 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryImplTest.count">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.62">
     <configuration name="UserRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-system-backend" />
       <extension name="coverage">
@@ -172,10 +177,11 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <deployment>
         <artifact name="note-system-backend:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/note_system_backend_war_exploded" />
+            <option name="CONTEXT_PATH" value="/notes" />
           </settings>
         </artifact>
       </deployment>
@@ -187,6 +193,54 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="38707" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -209,6 +263,14 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.UserRepositoryImplTest" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.count" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.deleteById" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.findAll" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.save" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.62" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserRepositoryImplTest.count" />
@@ -229,7 +291,7 @@
       <updated>1655915957674</updated>
       <workItem from="1655915958920" duration="6421000" />
       <workItem from="1655950414620" duration="3542000" />
-      <workItem from="1655962448978" duration="6987000" />
+      <workItem from="1655962448978" duration="12827000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1655917110743</created>
@@ -259,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655966391527</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Test Repos">
+      <created>1655969578207</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655969578207</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +350,7 @@
     <MESSAGE value="Finalize the entity package" />
     <MESSAGE value="Finalize the Servlets with spring-web-mvc" />
     <MESSAGE value="Add Yaml to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Yaml to the project" />
+    <MESSAGE value="Test Repos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Repos" />
   </component>
 </project>

@@ -9,14 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @Transactional
-@SpringJUnitConfig({WebRootConfig.class,WebAppConfig.class})
+@SpringJUnitConfig({WebRootConfig.class, WebAppConfig.class})
 class UserRepositoryImplTest {
 
     @Autowired
@@ -29,7 +28,7 @@ class UserRepositoryImplTest {
         //when
         User save = userRepository.save(user);
         //then
-        assertEquals(user,save);
+        assertEquals(user, save);
     }
 
     @Test
@@ -47,13 +46,11 @@ class UserRepositoryImplTest {
         User dulanga = new User(UUID.randomUUID().toString(), "dulanga@ijse.lk", "dulanga", "Dulanga");
         User lahiru = new User(UUID.randomUUID().toString(), "lahiru@ijse.lk", "lahitu", "Lahiru");
 
-        ArrayList<User> users = new ArrayList<>();
-
         User savedDulanga = userRepository.save(dulanga);
-        User savedLahiru= userRepository.save(lahiru);
+        User savedLahiru = userRepository.save(lahiru);
 
         List<User> all = userRepository.findAll();
-        assertTrue(all.size()==2);
+        assertTrue(all.size() == 2);
 
     }
 
@@ -67,6 +64,6 @@ class UserRepositoryImplTest {
         userRepository.save(lahiru);
 
         long count = userRepository.count();
-        assertTrue(count==2);
+        assertTrue(count == 2);
     }
 }
