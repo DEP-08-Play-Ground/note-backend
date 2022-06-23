@@ -7,8 +7,6 @@ import ik.ijse.dep8.note.service.UserService;
 import ik.ijse.dep8.note.service.exception.DuplicateEmailException;
 import ik.ijse.dep8.note.service.exception.NotFoundException;
 import ik.ijse.dep8.note.service.util.EntityDTOTransformer;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO registerUser(UserDTO user) throws DuplicateEmailException {
-        if (userRepository.existsUserByEmail(user.getEmail())){
+        if (userRepository.existsUserByEmail(user.getEmail())) {
             throw new DuplicateEmailException("Email Already Exists");
         }
         return transformer.getUserDTO(userRepository.save(transformer.getUserEntity(user)));
