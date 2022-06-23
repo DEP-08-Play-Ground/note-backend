@@ -1,0 +1,11 @@
+jpa:
+  show-sql: true
+  generate-ddl: true
+  dialect: org.hibernate.dialect.MySQL8Dialect
+
+hikari:
+  jdbc-url: jdbc:mysql://localhost:3306/dep8_notes?createDatabaseIfNotExist=true
+  username: root
+  password: root
+  driver-classname: com.mysql.cj.jdbc.Driver
+  max-pool-size: 10
