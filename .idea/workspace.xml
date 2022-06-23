@@ -9,16 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f856a69-f340-42d6-87f8-4fe46273212d" name="Changes" comment="Test Repos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/advice/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/NoteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/exception/DuplicateEmailException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/exception/NotFoundException.java" afterDir="false" />
+    <list default="true" id="7f856a69-f340-42d6-87f8-4fe46273212d" name="Changes" comment="Finalize the UserController">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/service/util/EntityDTOTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/JPAConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/JPAConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebRootConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/config/WebRootConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/custom/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/custom/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ik/ijse/dep8/note/repository/custom/impl/UserRepositoryImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,14 +63,15 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
+    "last_opened_file_path": "/home/dulanga/Desktop/Spring-Backend/note-system-backend/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "AndroidSdkUpdater",
     "spring.configuration.checksum": "4ae38430d33b5d571e17ee04816935b9"
   },
@@ -93,10 +95,11 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn compile\" />
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.62">
+  <component name="RunManager" selected="JUnit.UserRepositoryImplTest.existsUserByEmail">
     <configuration name="UserRepositoryImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-system-backend" />
       <extension name="coverage">
@@ -144,6 +147,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserRepositoryImplTest.existsUserByEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="note-system-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ik.ijse.dep8.note.repository.custom.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ik.ijse.dep8.note.repository.custom.impl" />
+      <option name="MAIN_CLASS_NAME" value="ik.ijse.dep8.note.repository.custom.impl.UserRepositoryImplTest" />
+      <option name="METHOD_NAME" value="existsUserByEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserRepositoryImplTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="note-system-backend" />
       <extension name="coverage">
@@ -155,22 +174,6 @@
       <option name="PACKAGE_NAME" value="ik.ijse.dep8.note.repository.custom.impl" />
       <option name="MAIN_CLASS_NAME" value="ik.ijse.dep8.note.repository.custom.impl.UserRepositoryImplTest" />
       <option name="METHOD_NAME" value="findAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserRepositoryImplTest.save" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="note-system-backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ik.ijse.dep8.note.repository.custom.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ik.ijse.dep8.note.repository.custom.impl" />
-      <option name="MAIN_CLASS_NAME" value="ik.ijse.dep8.note.repository.custom.impl.UserRepositoryImplTest" />
-      <option name="METHOD_NAME" value="save" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -264,20 +267,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.UserRepositoryImplTest.existsUserByEmail" />
       <item itemvalue="JUnit.UserRepositoryImplTest" />
       <item itemvalue="JUnit.UserRepositoryImplTest.count" />
       <item itemvalue="JUnit.UserRepositoryImplTest.deleteById" />
       <item itemvalue="JUnit.UserRepositoryImplTest.findAll" />
-      <item itemvalue="JUnit.UserRepositoryImplTest.save" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.62" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserRepositoryImplTest.existsUserByEmail" />
         <item itemvalue="JUnit.UserRepositoryImplTest.count" />
         <item itemvalue="JUnit.UserRepositoryImplTest.findAll" />
         <item itemvalue="JUnit.UserRepositoryImplTest.deleteById" />
         <item itemvalue="JUnit.UserRepositoryImplTest" />
-        <item itemvalue="JUnit.UserRepositoryImplTest.save" />
       </list>
     </recent_temporary>
   </component>
@@ -291,7 +294,7 @@
       <updated>1655915957674</updated>
       <workItem from="1655915958920" duration="6421000" />
       <workItem from="1655950414620" duration="3542000" />
-      <workItem from="1655962448978" duration="12827000" />
+      <workItem from="1655962448978" duration="17157000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1655917110743</created>
@@ -328,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655969578207</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finalize the UserController">
+      <created>1655977219457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655977219457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +361,7 @@
     <MESSAGE value="Finalize the Servlets with spring-web-mvc" />
     <MESSAGE value="Add Yaml to the project" />
     <MESSAGE value="Test Repos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Repos" />
+    <MESSAGE value="Finalize the UserController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalize the UserController" />
   </component>
 </project>

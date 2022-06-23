@@ -66,4 +66,12 @@ class UserRepositoryImplTest {
         long count = userRepository.count();
         assertTrue(count == 2);
     }
+
+    @Test
+    void existsUserByEmail() {
+        User dulanga = new User(UUID.randomUUID().toString(), "dulanga@ijse.lk", "dulanga", "Dulanga");
+        userRepository.save(dulanga);
+
+        assertTrue(userRepository.existById(dulanga.getId()));
+    }
 }

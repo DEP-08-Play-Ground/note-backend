@@ -50,6 +50,7 @@
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:4.0.3" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
           <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.30" />
+          <element id="library" level="project" name="Maven: org.modelmapper:modelmapper:3.1.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
